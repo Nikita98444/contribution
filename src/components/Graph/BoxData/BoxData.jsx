@@ -7,7 +7,7 @@ const BoxData = (props) =>{
 
     
     return (
-        <div >
+        <div className={classes.block}>
             
         </div>
     )
