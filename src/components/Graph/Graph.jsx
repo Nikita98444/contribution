@@ -11,10 +11,38 @@ const Graph = (props) => {
     DataEnd = DataEnd.toISOString().slice(0, 10) // Отбрасываем время
     console.log(DataEnd)
     let a = 0
-    let graph = [] // Массив блоков
-    while (a < 51) {
+    let graph1 = [] // Массив блоков
+    let graph2 = [] // Массив блоков
+    let graph3 = [] // Массив блоков
+    let graph4 = [] // Массив блоков
+    let graph5 = [] // Массив блоков
+    let graph6 = [] // Массив блоков
+    let graph7 = [] // Массив блоков
+    while (a < 357) {
         a++
-        graph.push(<BoxData />)
+        if(a <= 51){
+            graph1.push(<BoxData key={a} />)
+        }
+        else if(a<=102){
+            graph2.push(<BoxData key={a} />)
+        }
+        else if(a<=153){
+            graph3.push(<BoxData key={a} />)
+        }
+        else if(a<=204){
+            graph4.push(<BoxData key={a} />)
+        }
+        else if(a<=255){
+            graph5.push(<BoxData key={a} />)
+        }
+        else if(a<=306){
+            graph6.push(<BoxData key={a} />)
+        }
+        else if(a<=357){
+            graph7.push(<BoxData key={a} />)
+        }
+
+
     }
 
 
@@ -74,30 +102,41 @@ const Graph = (props) => {
             }}>
                 Меньше
             </div>
-            <div style={{ position: "absolute", marginTop:170, marginLeft:370, 
-                 width: 20, height: 20,
-                 backgroundColor: "#EDEDED",
-        }}>              
+            <div style={{
+                position: "absolute", marginTop: 170, marginLeft: 370,
+                width: 20, height: 20,
+                backgroundColor: "#EDEDED",
+            }}>
             </div>
-            <div style={{ position: "absolute", marginTop:170, marginLeft:395, 
-                 width: 20, height: 20,
-                 backgroundColor: "#ACD5F2",
-        }}>              
+            <div style={{
+                position: "absolute", marginTop: 170, marginLeft: 395,
+                width: 20, height: 20,
+                backgroundColor: "#ACD5F2",
+            }}>
             </div>
-            <div style={{ position: "absolute", marginTop:170, marginLeft:420, 
-                 width: 20, height: 20,
-                 backgroundColor: "#7FA8C9",
-        }}>              
+            <div style={{
+                position: "absolute", marginTop: 170, marginLeft: 420,
+                width: 20, height: 20,
+                backgroundColor: "#7FA8C9",
+            }}>
             </div>
-            <div style={{ position: "absolute", marginTop:170, marginLeft:445, 
-                 width: 20, height: 20,
-                 backgroundColor: "#527BA0",
-        }}>              
+            <div style={{
+                position: "absolute", marginTop: 170, marginLeft: 445,
+                width: 20, height: 20,
+                backgroundColor: "#527BA0",
+            }}>
             </div>
-            <div style={{ position: "absolute", marginTop:170, marginLeft:470, 
-                 width: 20, height: 20,
-                 backgroundColor: "#254E77",
-        }}>              
+            <div style={{
+                position: "absolute", marginTop: 170, marginLeft: 470,
+                width: 20, height: 20,
+                backgroundColor: "#254E77",
+            }}>
+            </div>
+            <div style={{
+                color: '#C8C7C7', marginTop: 170, position: "absolute", marginLeft: 500,
+                fontSize: 14
+            }}>
+                больше
             </div>
 
         </div>
@@ -105,27 +144,26 @@ const Graph = (props) => {
         <div className={classes.container}>
             <div className={classes.blocks} >
                 <div className={classes.block} >
-                    {graph}
+                    {graph1}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph2}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph3}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph4}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph5}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph6}
                 </div>
                 <div className={classes.block} >
-                    {graph}
+                    {graph7}
                 </div>
-
             </div>
         </div>
 
