@@ -11,7 +11,7 @@ const graphReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case SET_CALENDAR_DATA: {
-            return { ...state, calendarData: [...action.calendarData] } 
+            return { ...state, calendarData: action.calendarData } 
         }
 
         default:
@@ -35,7 +35,7 @@ export const calendarDataThunk = () => {
     return (dispatch) => {
 
         graphAPI.getCalendar().then(response => {
-            //dispatch(calendarDataAC(response.data))
+            dispatch(calendarDataAC(response.data))
              console.log(response.data)
 
         }).catch(error => {
