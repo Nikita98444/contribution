@@ -2,13 +2,14 @@ import React from "react";
 import { connect } from "react-redux";
 import { compose } from "redux";
 import Graph from './Graph'
+import calendarDataThunk from './../../redux/graphReducer'
 
 //Делаю классовую компоненту, чтобы сделатчь запрос
 //Контейнерная компонента нужна, чтобы снабдить данными и не засорять презентационную компоненту
 class GraphContainer extends React.Component {
 
     componentDidMount(){
-        
+        this.props.calendarDataThunk()
     }
 
 
@@ -36,5 +37,5 @@ let mapStateToProps = (state)=>({
 
 
 export default compose(
-    connect(mapStateToProps,{}),
+    connect(mapStateToProps,{calendarDataThunk}),
 )(GraphContainer) 
