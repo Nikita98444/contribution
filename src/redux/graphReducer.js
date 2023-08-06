@@ -31,7 +31,19 @@ export const calendarDataAC = (calendarData) => {
 
 
 //thunk
+export const calendarDataThunk = () => {
+    return (dispatch) => {
 
+        graphAPI.getCalendar().then(response => {
+
+            dispatch(calendarDataAC(response.data))
+            console.log(response.data)
+        }).catch(error => {
+            console.log(error)
+        })
+
+    }
+}
 
 
 
