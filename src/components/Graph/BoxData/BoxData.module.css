@@ -4,6 +4,9 @@
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #EDEDED;
+    position: relative;
+    z-index: 999;
+
 }
 
 .block1{
@@ -12,6 +15,9 @@
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #ACD5F2;
+    position: relative;
+    z-index: 999;
+
 }
 .block2{
     width: 20px;
@@ -19,6 +25,9 @@
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #7FA8C9;
+    position: relative;
+    z-index: 999;
+
 }
 .block3{
     width: 20px;
@@ -26,6 +35,9 @@
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #527BA0;
+    position: relative;
+    z-index: 999;
+
 }
 .block4{
     width: 20px;
@@ -33,4 +45,32 @@
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #254E77;
+    position: relative;
+    z-index: 999;
+}
+
+.mainDiv{
+    overflow: hidden;
+    position: relative;
+}
+
+.block :hover{
+    border-width: 1px;
+    border-color: black;
+}
+.block1 :hover{
+    border-width: 1px;
+    border-color: black;
+}
+.block2 :hover{
+    border-width: 1px;
+    border-color: black;
+}
+.block3 :hover{
+    border-width: 1px;
+    border-color: black;
+}
+.block4 :hover{
+    border-width: 1px;
+    border-color: black;
 }
