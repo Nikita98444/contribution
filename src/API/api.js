@@ -3,7 +3,7 @@ import axios from "axios";
 
 //Единая настройка
 const instanse = axios.create({
-    withCredentials: true,
+    withCredentials: false,
 
     baseURL: `https://dpg.gg`
 
