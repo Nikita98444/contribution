@@ -9,7 +9,7 @@ position="right center">
 <div>GeeksforGeeks</div>
 <button>Click here</button>
 </Popup> */}
-
+ 
 //функцтональная компонента
 const BoxData = (props) => {
 
