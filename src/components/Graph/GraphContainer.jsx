@@ -17,7 +17,7 @@ class GraphContainer extends React.Component {
 
         return (
             <div >
-                <Graph />
+                <Graph {...this.props}/>
             </div>
 
         )

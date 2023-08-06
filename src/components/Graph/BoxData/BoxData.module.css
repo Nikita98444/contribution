@@ -1,7 +1,36 @@
 .block{
-    width: 30px;
+    width: 20px;
     height: 20px;
     margin-left: 2px;
     margin-bottom: 2px;
     background-color: #EDEDED;
+}
+
+.block1{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    background-color: #ACD5F2;
+}
+.block2{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    background-color: #7FA8C9;
+}
+.block3{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    background-color: #527BA0;
+}
+.block4{
+    width: 20px;
+    height: 20px;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    background-color: #254E77;
 }

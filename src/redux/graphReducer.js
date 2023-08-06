@@ -3,7 +3,7 @@ import {graphAPI} from './../API/api'
 const SET_CALENDAR_DATA = "SET_CALENDAR_DATA"
 
 let initialState = {
-    calendarData:[]
+    calendarData:{}
 }
 
 const graphReducer = (state = initialState, action) => {
@@ -36,7 +36,7 @@ export const calendarDataThunk = () => {
 
         graphAPI.getCalendar().then(response => {
             dispatch(calendarDataAC(response.data))
-             console.log(response.data)
+            //  console.log(response.data)
 
         }).catch(error => {
             console.log(error)

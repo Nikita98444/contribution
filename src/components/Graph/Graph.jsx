@@ -8,8 +8,8 @@ const Graph = (props) => {
     let DataNow = new Date()/* .toISOString().slice(0,10) */; //текущая дата
     let DataEnd = DataNow;
     DataEnd.setDate(DataNow.getDate() - ((7 * 50) + 7)) //дата -50 недель
-    DataEnd = DataEnd.toISOString().slice(0, 10) // Отбрасываем время
-    console.log(DataEnd)
+    // DataEnd = DataEnd.toISOString().slice(0, 10) // Отбрасываем время
+    // console.log(DataEnd)
     let a = 0
     let graph1 = [] // Массив блоков
     let graph2 = [] // Массив блоков
@@ -18,30 +18,34 @@ const Graph = (props) => {
     let graph5 = [] // Массив блоков
     let graph6 = [] // Массив блоков
     let graph7 = [] // Массив блоков
-    while (a < 357) {
+
+    //  console.log(DataEnd.toISOString().slice(0,10))
+    while ( /* DataEnd.setHours(0,0,0,0) <= DateWhile.setHours(0,0,0,0)  */ a <= 357) {
+        
         a++
         if(a <= 51){
-            graph1.push(<BoxData key={a} />)
+            graph1.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=102){
-            graph2.push(<BoxData key={a} />)
+            graph2.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=153){
-            graph3.push(<BoxData key={a} />)
+            graph3.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=204){
-            graph4.push(<BoxData key={a} />)
+            graph4.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=255){
-            graph5.push(<BoxData key={a} />)
+            graph5.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=306){
-            graph6.push(<BoxData key={a} />)
+            graph6.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
         else if(a<=357){
-            graph7.push(<BoxData key={a} />)
+            graph7.push(<BoxData key={a} DT = {new Date(DataEnd.toISOString().slice(0,10))} data = {props.calendarData}/>)
         }
 
+        DataEnd.setDate(DataEnd.getUTCDate()+ 1)
 
     }
 
